@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 13.0.0.0 for Windows">
+    <link rel="stylesheet" href="style.css">
+<TITLE>数値解析</TITLE>
+</HEAD>
+<BODY>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<h1>【　数値解析　】</h1>
+
+<p id="buttom"><strong>表示</strong></p><br>
+<p class="di"><b>｢数値解析｣</b></p>とは、正確な解を求めることができない数学上の問題を近似的に解く手法のことです。数値解析で求める近似的な解のことを<p class="di"><b>｢解の近似値｣</b></p>といいます。<br>
+数値解析は、実際の現象をコンピュータ上でシュミレーションするために利用されます。<br>
+<strong>(1)二分法</strong><br>
+<p class="di"><b>｢二分法｣</b></p>とは、方程式の解を含む区間の中間点を求める作業を繰り返すことによって、解の近似値を求める手法のことです。<br>
+二手法を使って近似値を求める方法は、次のとおりです。<br>
+<P><IMG src="1-1-2-5-1.JPG" width="400" border="0"></P>
+
+<strong>(2)補間法</strong><br>
+<p class="di"><b>｢補間｣</b></p>とは、複数の点を通る多項式の曲線で、あるxの値に対するyの値を計算することです。<p class="di"><b>｢補間法｣</b></p>にはいくつかの種類がありますが、異なる複数の点を通る多項式を求め、離散的なデータから値を推測できる<p class="di"><b>｢ラグランジュ補間法｣</b></p>がよく使われます。<br>
+<strong>(3)数値解析による誤差</strong><br>
+数値解析で求めた解の近似値は、真の解である数値(真値)との間に誤差が発生します。数値解析で発生する誤差には、次のようなものがあります。<br>
+<P><IMG src="1-1-2-5-2.JPG" width="600" border="0"></P>
+
+    <script>
+        const buttom = document.getElementById('buttom');
+        const diElements = document.querySelectorAll('.di'); // クラスの要素をすべて取得
+    
+        // マウスホバー時
+        buttom.addEventListener('mouseover', () => {
+            diElements.forEach(di => {
+                di.style.opacity = '1';
+            });
+        }, false);
+    
+        // マウスが離れている時
+        buttom.addEventListener('mouseleave', () => {
+            diElements.forEach(di => {
+                di.style.opacity = '0';
+            });
+        }, false);
+    </script>
